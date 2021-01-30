@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  padding: 20px 0;
+  background-color: antiquewhite;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto auto;
+  row-gap: 40px;
+}
+
+.social-card {
+  width: 600px;
+  height: 360px;
+  background-color: black;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition-duration: 0.7s;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 300px auto;
+}
+.social-card:hover {
+  box-shadow: inset 0 0 10px deepskyblue;
+}
+.social-card .image-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-card .image-panel .image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px deepskyblue;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.social-card .details-panel {
+  padding: 30px 25px 20px 40px;
+  height: fit-content;
+  display: grid;
+  row-gap: 10px;
+}
+.social-card .details-panel .name {
+  position: relative;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #9ee6f7;
+  margin-bottom: 20px;
+}
+.social-card .details-panel .name:after {
+  content: "";
+  background-color: deepskyblue;
+  height: 3px;
+  width: 70%;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+.social-card .details-panel .details-row .label {
+  color: aliceblue;
+  display: inline-block;
+  width: 120px;
+}
+.social-card .details-panel .details-row .value {
+  color: #f3bdf7;
+}
+.social-card .social-media-icons {
+  grid-column: 1/3;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+.social-card .social-media-icons .social-media-icon {
+  background-color: deepskyblue;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition-duration: 0.8s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-card .social-media-icons .social-media-icon:hover {
+  color: deepskyblue;
+  background-color: black;
+  box-shadow: 0 0 15px deepskyblue;
+}
